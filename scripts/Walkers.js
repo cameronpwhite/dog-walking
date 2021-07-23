@@ -7,6 +7,8 @@ const cities = getCities()
 //Compare the cityId of each walker to cities Id.
 //If it is the same, output the name of the city.
 
+//Ideas to refactor - maybe use .forEach()?
+
 document.addEventListener(
     "click",
     (clickEvent) => {
