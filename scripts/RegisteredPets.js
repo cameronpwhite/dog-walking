@@ -20,17 +20,16 @@ document.addEventListener(
                     assignedWalker.name = walkers.find(findWalker).name
 
 
-                    // for (const walker of walkers) {
-                    //     if (walker.id === pet.walkerId) {
-                    //         assignedWalker.name = walker.name;
-                    //     }
+                    for (const walker of walkers) {
+                        if (walker.id === pet.walkerId) {
+                            assignedWalker.name = walker.name;
+                        }
                     }
                     window.alert(` ${pet.name} is being walked by ${assignedWalker.name} `)
                 }
             }
-
         }
-    
+    }
 )
 
 

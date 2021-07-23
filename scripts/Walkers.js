@@ -1,4 +1,11 @@
-import { getWalkers } from "./database.js"
+import { getWalkers, getCities } from "./database.js"
+
+const walkers = getWalkers()
+const cities = getCities()
+
+//Goal is to display city that walker services.
+//Compare the cityId of each walker to cities Id.
+//If it is the same, output the name of the city.
 
 document.addEventListener(
     "click",
@@ -9,16 +16,20 @@ document.addEventListener(
 
             for (const walker of walkers) {
                 if (walker.id === parseInt(walkerId)) {
-                    window.alert(`${walker.name} services ${walker.city}`)
+                    for (const city of cities) {
+                        if (walker.cityId === city.id) { 
+                        window.alert(`${walker.name} services ${city.name}`)
+                    }
+                    
                 }
             
             }
         }
     }
+}
 )
 
 
-const walkers = getWalkers()
 
 
 export const Walkers = () => {
